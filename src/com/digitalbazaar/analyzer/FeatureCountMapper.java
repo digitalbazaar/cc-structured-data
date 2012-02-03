@@ -14,6 +14,8 @@ import org.apache.hadoop.mapred.Reporter;
 import org.commoncrawl.protocol.shared.ArcFileItem;
 
 import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
 
 /**
  * Outputs all features contained within the markup of pages contained
@@ -48,7 +50,7 @@ public class FeatureCountMapper extends MapReduceBase
 
          // Create a DOM out of the HTML
          Document doc = Jsoup.parse(content);
-      
+
          // Count all attributes containing a property attribute   
          Elements properties = doc.select("[property]");
          if(properties.size() > 0)
