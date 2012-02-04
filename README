@@ -25,4 +25,9 @@ https://ccp.cloudera.com/display/SUPPORT/Downloads
 Once you've got Hadoop installed, you can use the 'hadoop jar' task to execute
 the tutorial code.  Here's the pattern:
 
-hadoop jar <checkout location>/dist/lib/StructuredDataAnalyzer.jar com.digitalbazaar.StructuredDataAnalyzer <Amazon AWS access key ID> <Amazon AWS secret access key> <CommonCrawl crawl files to use as input> <HDFS output location>
+hadoop jar <checkout location>/dist/lib/StructuredDataAnalyzer.jar 
+   com.digitalbazaar.analyzer.StructuredDataAnalyzer 
+   <Amazon AWS access key ID> 
+   <Amazon AWS secret access key> 
+   <CommonCrawl crawl files to use as input> 
+   <HDFS output location>
